@@ -1,5 +1,15 @@
-const add = (a: number, b: number) => {
-    return a + b;
-} 
+interface Person {
+    name: string;
+    age: number;
+    greeet(phrase: string): void;
+}
 
-console.log(add(2, 5));
+let user: Person;
+
+user = {
+    name: 'Max',
+    age: 30,
+    greeet(phrase: string) {
+        console.log(phrase + ' ' + this.name);
+    }
+}
